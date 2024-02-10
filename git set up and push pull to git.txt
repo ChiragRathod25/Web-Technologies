@@ -10,3 +10,7 @@ git add . //build before commit
 git commit -m "first" // commit it
 git push org master // push to github
 git pull org master // pull code
+
+
+
+git push -g orf master // push all existing files 
