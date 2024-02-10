@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    th{
+        text-align: left;
+        padding: 3px;
+    }
+    #header{
+        text-align: center;
+    }
+</style>
+<body>
+    <form action="">
+        <table border="2" 
+         width="50%" align="center">
+            <tr >
+                <th colspan="2" id="header">
+                    <h2>
+                        SEM 4 Registration Form
+                    </h2>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Academic">Select Academic Year : </label>
+                </th>
+                <th>
+                    <select name="Academic" id="Academic">
+                        <option value="2022-2023">2022-2023</option>
+                        <option value="2023-2024">2023-2024</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="semesterType">Semester Type </label>
+                </th>
+                <th>
+                    <select name="semesterType" id="semesterType">
+                        <option value="ODD">ODD</option>
+                        <option value="EVEN">EVEN</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="semester">Select Semester</label>
+                </th>
+                <th>
+                    <select name="semester" id="semester">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="StartDate">Start Date </label>
+                </th>
+                <th>
+                  <input type="date" name="StartDate" id="StartDate">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="ID">ID</label>
+                </th>
+                <th>
+                    <input type="text" name="ID" id="ID" placeholder="Enter your ID ">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Password">Password </label>
+                </th>
+                <th>
+                   <input type="password" name="Password" id="Password" placeholder="Enter your Password">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Name">Name </label>
+                </th>
+                <th>
+                   <input type="text" name="Name" id="Name" placeholder="Enter your Name">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Gender">Gender </label>
+                </th>
+                <th>
+                   <input type="radio" id="Male" name="Gender" value="Male">
+                   <label for="Male">Male</label>
+                   <input type="radio" id="female" name="Gender" value="female">
+                   <label for="female">Female</label>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Address">Address </label>
+                </th>
+                <th>
+                   <textarea name="Address" id="Address" cols="30" rows="3"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="Subject">Subject </label>
+                </th>
+                <th>    
+                   <input type="checkbox" name="DSA" id="DSA">
+                   <label for="DSA">Data Structure</label>
+                   <br>
+                   <input type="checkbox" name="WEB" id="WEB">
+                   <label for="WEB">Web Technologies</label>
+                   <br>
+                   <input type="checkbox" name="Maths" id="Maths">
+                   <label for="Maths">Maths</label>
+                   <br>
+                   <input type="checkbox" name="Science" id="Science">
+                   <label for="Science">Science</label>
+                   <br>
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="fees">Fees </label>
+                </th>
+                <th>
+                   <input type="text" name="fees" id="fees" placeholder="50/-">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="reset">Reset Form </label>
+                </th>
+                <th>
+                 <input type="reset">
+                </th>
+            </tr>
+            <tr>
+                <th width="40%" >
+                    <label for="submit">Submit </label>
+                </th>
+                <th>
+                 <input type="submit">
+                </th>
+            </tr>
+          
+        </table>
+    </form>
+</body>
+</html>
