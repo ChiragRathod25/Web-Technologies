@@ -10,11 +10,15 @@ git add . //build before commit
 git commit -m "first" // commit it
 git push org master // push to github
 git pull org master // pull code
-
-
-
 git push -g orf master // push all existing files 
 
 git branch -m main // Change branch to main
 git branch // get all branches
 git branch -a // list all branches
+
+git checkout -b main //create main branch
+git push -u origin main
+
+git branch -d master // delete master branch
+
+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 -  Private Access key
