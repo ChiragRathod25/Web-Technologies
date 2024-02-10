@@ -1,0 +1,38 @@
+.container{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
+.parent{
+position:absolute;
+width:50%;
+height:50%;
+border:2px solid purple;
+padding:10px;
+}
+body{
+    height: 200vh;
+}
+#first{
+    background-color: black;
+    position: relative; 
+    /* space is resereved  */
+    top: 50px;
+    left: 50px;
+}
+#second{
+    background-color: blue;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    z-index: 2;
+}
+#third{
+    background-color: brown;
+    position: fixed;
+    top: 15px;
+    left: 100px;
+}
+#four{
+    background-color: purple;
+}
