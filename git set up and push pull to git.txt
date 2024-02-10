@@ -1,0 +1,12 @@
+git init
+
+git remote  -v //show all remote brances
+
+git remote add org "link : private access @ git..." // to add remote branch
+
+git remote remove org //to remove remote branch
+
+git add . //build before commit
+git commit -m "first" // commit it
+git push org master // push to github
+git pull org master // pull code
