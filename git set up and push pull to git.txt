@@ -17,3 +17,4 @@ git push -g orf master // push all existing files
 
 git branch -m main // Change branch to main
 git branch // get all branches
+git branch -a // list all branches
