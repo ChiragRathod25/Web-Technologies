@@ -10,11 +10,13 @@ git add . //build before commit
 git commit -m "first" // commit it
 git push org master // push to github
 git pull org master // pull code
-git push -g orf master // push all existing files 
+git push -f orf master // push all existing files 
 
 git branch -m main // Change branch to main
 git branch // get all branches
 git branch -a // list all branches
+git branch -r // list all branches included by other , includes remote
+git checkout -b local_branch_name origin/remote_branch_name        // to checkout a remote branch
 
 git checkout -b main //create main branch
 git push -u origin main
