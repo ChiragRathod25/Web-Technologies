@@ -24,3 +24,6 @@ git push -u origin main
 git branch -d master // delete master branch
 
 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 -  Private Access key
+
+
+git fetch rebase main // from remote branch to make copy of main into remote branch 
