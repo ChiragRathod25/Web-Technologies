@@ -8,7 +8,7 @@ let Myname="Chirag"
 let age=21
 let played =true
 
-//number =>2 to power 53
+//number =>2 to power 53 range
 //bigint -> data type store to higher range number
 //string -> "string"
 //boolean ->true/false
