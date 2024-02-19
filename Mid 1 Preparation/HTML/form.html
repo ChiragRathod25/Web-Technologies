@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <meta name="author" content="ChiragRathod"/>
+    <!-- <meta http-equiv="refresh"  content="3;URL(www.google.com)" > -->
+</head>
+
+<body>
+    <form action="script.js" method="post">
+            <fieldset>
+                <legend align="right">
+                    Personal
+                </legend>
+                <label for="Name">Name : </label>
+                <input type="text" id="Name" size="20">
+                <br>
+                <label for="Address">Address</label>
+                <textarea name="Address" id="Address" cols="20" rows="5"></textarea>
+                <br>
+                <label for="country">Country : </label>
+                <input type="text" id="country" value="india">
+            </fieldset>
+        
+            <fieldset>
+                <legend>
+                    Shipping Address
+                </legend>
+                    Credit Card : 
+                <br>
+                <input type="radio" name="=card" value="SBI" checked> SBI
+                <br>
+                <input type="radio" name="=card" value="HDFC"> HDFC
+                <br>
+                <input type="radio" name="=card" value="ICICI"> ICICI
+                <br>
+                Select Date : 
+                <input type="date" name="date" id="date">
+                <br>
+                <label for="password"></label>
+                Password :
+                <input type="password" id="password">
+                <br> 
+                Select Choice : 
+                <input type="checkbox" value="Anand" checked> Anand 
+                <input type="checkbox" value="Delhi">Delhi
+                <br>
+                Select Country :
+                <select name="country" id="country" >
+                    <option value="India">India</option>
+                    <option value="Russia" selected>Russia</option>
+                    <option value="UK">UK</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Submission and buttons
+                </legend>
+                Submit : 
+                <input type="submit">
+                <br>
+                Reset :
+                <input type="reset">
+            </fieldset>
+        
+
+    </form>
+</body>
+
+</html>
