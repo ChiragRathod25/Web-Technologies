@@ -33,7 +33,6 @@ console.log(age4+" "+valueInNumber4)  //0 for false
 //null =>0
 // undefiner =>NaN
 
-
 let isLoggedIn=1;
 let booleanLoggedIn=Boolean(isLoggedIn)
 console.log(booleanLoggedIn)
