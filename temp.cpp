@@ -26,7 +26,7 @@ int check_bracket(string s)
 		{
 			st.pop();
 		}
-		else if(( c >= 'a' && c <= 'z') || ( c >= 'A' && c <= 'Z') || ( c >= '-50' && c <= '50'))
+		else if(( c >= 'a' && c <= 'z') || ( c >= 'A' && c <= 'Z') || ( c >= -50 && c <= 50))
 		{
 			continue;
 		}
