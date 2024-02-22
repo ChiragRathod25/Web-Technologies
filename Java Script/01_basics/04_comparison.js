@@ -7,7 +7,6 @@
 // console.log("2">1) //it will convert string 2 to number 2 and  then compare it with 1
 // console.log("02"<1) 
 
-
 // console.log(null>0)
 // console.log(null==0)
 // console.log(null>=0)
