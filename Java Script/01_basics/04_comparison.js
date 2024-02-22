@@ -16,5 +16,5 @@
 // console.log(undefined<0)
 // console.log(undefined>0) //it will always undefined
 
-// === "strinct check"
+// === "strict check"
 console.log("2"===2) // it will give error because data type is not same
