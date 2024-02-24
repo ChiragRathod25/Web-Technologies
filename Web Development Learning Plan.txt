@@ -1,0 +1,5 @@
+What to do ?
+HTML, CSS - do projects of projects
+JS - Leetcode practice 
+
+currently - Complete JS from Code aur Chai
