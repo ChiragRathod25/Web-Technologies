@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            counter-reset: first;
+        }
+        body>ol>li {
+            counter-reset: second;
+        }
+        body>ol>li>ol>li {
+            counter-reset: third;
+        }
+        bodu>ol>li>ol>li>ol>li{
+            counter-reset: four;
+        }
+        body>ol>li::before {
+            content: "Chapter "counter(first)".";
+            counter-increment: first;
+        }
+        body>ol>li>ol>li::before {
+            content: counter(first)"." counter(second)".";
+            counter-increment: second;
+        }
+        body>ol>li>ol>li>ol>li::before {
+            content: counter(first)"." counter(second)"." counter(third);
+            counter-increment: third;
+        }
+        body>ol>li>ol>li>ol>li>ol>li::before{
+            content: counter(first)"."counter(second)"."counter(third)"."counter(four);
+            counter-increment: four;
+        }
+	li{
+	    list-style-type:none;
+   	}
+    </style>
+</head>
+<body>
+    <span>Title : Web Technologies</span>
+    <br>
+    <span>Table of content</span>
+    <ol type="1">
+        <li>html</li>
+        <li>css
+            <ol type="1">
+                <li>Introduction </li>
+                <li>Adding Style sheet
+                    <ol type="1">
+                    <li>extrenal
+                       <ol type="1">
+                        <li>
+                            extrenal style sheets are useful
+                        </li>
+                       </ol>
+                    </li>
+                    </ol>
+                </li>
+                <li>browser incompatibility </li>
+            </ol>
+        </li>
+        <li>
+          XMl
+        </li>
+    </ol>
+</body>
+
+</html>
