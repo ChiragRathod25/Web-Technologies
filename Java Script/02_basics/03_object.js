@@ -49,5 +49,5 @@ console.log(jsUser.greeting());
 jsUser.greeting2=function (){
     console.log(`Happy b'day, ${this.name}`);
 }
-// console.log(jsUser.greeting2);
-// console.log(jsUser.greeting2());
+console.log(jsUser.greeting2);
+console.log(jsUser.greeting2());
