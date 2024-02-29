@@ -1,0 +1,87 @@
+ƒ clear() { [native code] }
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]0: h1#title.headingtitle: h1#title.headinglength: 1[[Prototype]]: HTMLCollection
+clear
+ƒ clear() { [native code] }
+clearInterval
+ƒ clearInterval() { [native code] }
+
+document.querySelector('h1')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('#heading')
+null
+
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('p:first-child')
+null
+
+document.querySelector('p[1]')
+VM1829:1 Uncaught DOMException: Failed to execute 'querySelector' on 'Document': 'p[1]' is not a valid selector.
+    at <anonymous>:1:10
+(anonymous) @ VM1829:1
+
+document.querySelector('p:first-child')
+null
+
+document.querySelector('p')
+<p>​"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed totam eligendi 
+assumenda, omnis minima!"</p>​
+
+document.querySelector('p:nth-child(2)')
+<p>​"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed totam eligendi assumenda, omnis minima!"</p>​
+
+document.querySelector('p:nth-child(1)')
+null
+
+document.querySelector('p:nth-child(0)')
+null
+
+document.querySelector('p:nth-child(3)')
+<p>​" console.log(window) console.log(window.document) console.log(document) console.dir(document) "</p>​
+
+document.querySelector('p:nth-child(2)')
+<p>​"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed totam eligendi assumenda, omnis minima!"</p>​
+
+document.querySelector('p')
+<p>​"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed totam eligendi assumenda, omnis minima!"</p>​
+
+document.querySelector("ul")
+<ul>​…​</ul>​
+
+const myul=document.querySelector('ul')
+undefined
+
+myul
+<ul>​…​</ul>​
+
+myul.querySelector('li')
+<li>​::marker​"1"</li>​
+
+const redbg=myul.querySelector('li')
+undefined
+
+redbg.style.backgroundColor="red"
+'red'
+
+redbg.style.padding="10px"
+'10px'
+
+redbg.style.borderRadius="10px"
+'10px'
+
+redbg.style.borderRadius="15px"
+'15px'
+
+redbg.innerText
+'1'
+
+redbg.innerText="one
+VM2619:1 Uncaught SyntaxError: Invalid or unexpected token
+
+redbg.innerText="one"
+'one'
