@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Specific Page</title>
+  </head>
+  <script>
+    function getBrowserName() {
+      var userAgent = navigator.userAgent;
+      var browserName = "";
+      if (userAgent.includes("OPR")) {
+        browserName = "OPR";
+      } else if (userAgent.includes("Edge")) {
+        browserName = "Edge";
+      } else {
+        browserName = "Chrome";
+      }
+      if (browserName == "OPR") {
+        location.href = "4_OPR.html";
+      } else if (browserName == "Edge") {
+        location.href = "4_EDGE.html";
+      }
+    }
+  </script>
+  <body onload="getBrowserName()">
+    This is Chrome Page
+  </body>
+</html>
