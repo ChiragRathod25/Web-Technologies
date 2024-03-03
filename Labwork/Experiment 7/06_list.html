@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Selection</title>
+  
+</head>
+<body>
+    <select name="country" id="country" autocomplete="off">
+        <option value="country">Select your country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+    </select>
+    
+    <select name="state" id="state" autocomplete="off">
+        <option>Select Country first</option>
+    </select>
+    <script>
+        const country = document.getElementById('country');
+        let state=document.getElementById('state');
+
+        country.addEventListener('change',function(){
+            state.innerHTML='';
+            if(country.value==='country'){
+                state.innerHTML=`<option>Select Country first</option>`;
+            }
+            else if(country.value==="India"){
+                let states=['Maharashtra','Gujarat','Rajasthan','Punjab','Kerala'];
+                for(i in states){
+                    state.innerHTML+=`<option>${states[i]}</option>`
+                }
+            }
+            else if(country.value==='USA'){
+                let states=['California','Florida','Texas','New York','Washington'];
+                for(i in states){
+                   state.innerHTML+="<option>"+states[i]+"</option>";
+                }
+            }
+            else if(country.value==='Canada'){
+                let states=['Ontario','Quebec','British Columbia','Alberta','Manitoba'];
+                for(i in states){
+                    let option=document.createElement('option');
+                    option.value=states[i];
+                    option.innerHTML=states[i];
+                    state.appendChild(option);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

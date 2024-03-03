@@ -12,15 +12,21 @@
       var browserName = "";
       if (userAgent.includes("OPR")) {
         browserName = "OPR";
-      } else if (userAgent.includes("Edge")) {
+      } else if (userAgent.includes("Edg")) {
         browserName = "Edge";
-      } else {
+      } 
+      else if(userAgent.includes("Safari")){
+        browserName = "Safari";
+      }else {
         browserName = "Chrome";
       }
       if (browserName == "OPR") {
         location.href = "4_OPR.html";
       } else if (browserName == "Edge") {
         location.href = "4_EDGE.html";
+      }
+      else if(browserName == "Safari"){
+        location.href = "4_Safari.html";
       }
     }
   </script>

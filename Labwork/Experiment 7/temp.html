@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection List Change Event</title>
+</head>
+<body>
+    <select name="items" id="items">
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+        <option value="item3">Item 3</option>
+        <option value="item4">Item 4</option>
+    </select>
+    <div id="selectedItem">Selected Item will be displayed here.</div>
+
+    <script>
+        // Select the <select> element
+        const selectElement = document.getElementById('items');
+
+        // Select the <div> element where we will display the selected item
+        const selectedItemDiv = document.getElementById('selectedItem');
+
+        // Add event listener for the 'change' event
+        selectElement.addEventListener('change', function() {
+            // Get the selected option
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+
+            // Update the content of the <div> with the selected item
+            selectedItemDiv.innerHTML = `Selected Item: ${selectedOption.text}`;
+        });
+    </script>
+</body>
+</html>
