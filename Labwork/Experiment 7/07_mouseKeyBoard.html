@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>retrive location and display Unicode character</title>
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    const mousePara = document.createElement("p");
+    document.querySelector("body").appendChild(mousePara);
+    
+    const mouseHeading = document.createElement("h1");
+    mouseHeading.innerHTML = "Mouse Location";
+    mousePara.appendChild(mouseHeading);
+    
+    const x_position = document.createElement("span");
+    const y_position = document.createElement("span");
+    mousePara.appendChild(x_position);
+    mousePara.appendChild(y_position);
+    document.querySelector("html").addEventListener("click", function (e) {
+      console.log(e);
+      x_position.innerHTML = `X : ${e.clientX} `;
+      y_position.innerHTML = `Y : ${e.clientY} `;
+    });
+
+    //keyboard key js
+    const keyBoardKey = document.createElement("p");
+    document.querySelector("body").appendChild(keyBoardKey);
+
+    const keyHeading = document.createElement("h1");
+    keyHeading.innerHTML = "Key Details";
+    keyBoardKey.appendChild(keyHeading);
+
+    const key = document.createElement("p");
+    const unicodeKey = document.createElement("p");
+    keyBoardKey.appendChild(key);
+    keyBoardKey.appendChild(unicodeKey);
+    document.querySelector("html").addEventListener("keydown", function (e) {
+        console.log(e)
+      key.innerHTML = `Key Pressed : ${e.key}`;
+      unicodeKey.innerHTML = `Unicode Charactar : ${e.key.charCodeAt(0)}`;
+      e.preventDefault(); //to prevent default behaviour of special keys
+    });
+  </script>
+</html>
