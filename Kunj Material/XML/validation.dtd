@@ -1,0 +1,6 @@
+<!ELEMENT customer (firstname, lastname, companyname, email, message)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT companyname (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT message (#PCDATA)>

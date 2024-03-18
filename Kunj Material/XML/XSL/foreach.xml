@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="foreach.xsl" ?>
+
+<catalog>
+	<cd>
+		<title>Title1</title>
+		<artist>abc</artist>
+	</cd>
+	<cd>
+		<title>Title2</title>
+		<artist>xyz</artist>
+	</cd>
+</catalog>

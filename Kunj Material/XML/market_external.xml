@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE customer SYSTEM "validation.dtd">
+<customer>
+  <firstname>John</firstname>
+  <lastname>Doe</lastname>
+  <companyname>Section</companyname>
+  <email>johndoe@section.io</email>
+  <message>Welcome message</message>
+</customer>

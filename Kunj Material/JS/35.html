@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script language="JavaScript">
+        msg = "";
+        function conf() {
+            return confirm("do you want to reset all data");
+        }
+        function change() {
+            var reLogin = /^[a-zA-Z]\w*$/;
+            if (!reLogin.test(frm.login.value))
+                alert("invalid login id");
+        }
+        function check() {
+            //alert('hi');
+            var reLogin = /^[a-zA-Z]\w*$/;
+            var rePassword = /^\w{4,8}$/;
+            var reMobile = /^9\d{9}$/;
+            var repan = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            var reuid = /^\d{12}$/;
+            var repcode = /^\d{6}$/;
+            var reemail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var redate = /^\d{4}\-(0?[1-9]|1?[0-2])\-\d{2})$/;
+
+            if (!reLogin.test(frm.login.value))
+                msg += "invalid login id";
+            if (!rePassword.test(frm.password.value))
+                msg += "invalid password";
+            if (!reMobile.test(frm.mobile.value))
+                msg += "invalid mobile";
+            if (!repan.test(frm.pan.value))
+                msg += "invalid PAN";
+            if (!reuid.test(frm.uid.value))
+                msg += "invalid aadhar";
+            if (!repcode.test(frm.pcode.value))
+                msg += "invalid pincode";
+            if (!reemail.test(frm.email.value))
+                msg += "invalid email";
+            if (!redate.test(frm.date1.value))
+                msg += "invalid date";
+            if (msg != "") {
+                alert(msg);
+                msg = [];
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form name="frm" action="logout.html" method="post">
+        login: <input type="text" name="login" onchange="change();"> <br>
+        password: <input type="password" name="password"> <br>
+        mobile number: <input type="text" name="mobile"> <br>
+        pan card number: <input type="text" name="pan"> <br>
+        aadhar card number: <input type="text" name="uid"> <br>
+        pin code number: <input type="text" name="pcode"> <br>
+        email: <input type="text" name="email"><br>
+        bdate: <input type="text" name="date1"><br>
+        <input type="submit" name="submit" value="Submit" onclick="return check();">
+        <input type="reset" name="reset" value="Reset" onclick="return conf();">
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE customer [
+    <!ELEMENT customer (firstname, lastname, companyname, email, message)>
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT companyname (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT message (#PCDATA)>
+]>
+<customer>
+    <firstname>John</firstname>
+    <lastname>Doe</lastname>
+    <companyname>Section</companyname>
+    <email>johndoe@section.io</email>
+    <message>Welcome message</message>
+</customer>

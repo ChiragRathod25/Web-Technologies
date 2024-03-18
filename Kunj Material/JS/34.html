@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    address book : <br>
+    <input type="text" id="name">
+    <input type="text" id="email">
+    <input type="button" value='add' onclick="add()">
+    <table id='tlb'>
+        <tr><th>Name</th><th>Email</th></tr>
+    </table>
+    <script language="JavaScript">
+        function add(){
+            n=document.getElementById("name");
+            e=document.getElementById("email");
+            row=document.createElement("tr");
+            col1=document.createElement("td");
+            col2=document.createElement("td");
+            txt=document.createTextNode(n.value);
+            col1.appendChild(txt);
+            txt=document.createTextNode(e.value);
+            col2.appendChild(txt);
+            row.appendChild(col1);
+            row.appendChild(col2);
+            t = document.getElementById('tlb');
+           // t.firstchild.appendChild(row);
+            t.appendChild(row);
+            n.value = e.value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="7student.xsl"?>
+
+<Student>
+	<level>
+		<ID>2</ID>
+		<Name>xyz</Name>
+	</level>
+	<level>
+		<ID>3</ID>
+		<Name>temp</Name>
+	</level>
+	<level>
+		<ID>4</ID>
+		<Name>abc</Name>
+	</level>
+		<level>
+		<ID>1</ID>
+		<Name>abc</Name>
+	</level>
+
+</Student>
+

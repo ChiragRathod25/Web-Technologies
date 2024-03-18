@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logical & bitwise operators</title>
+</head>
+<body>
+    <script>
+        //logical operators
+        var result = false && true;
+
+        document.writeln("false \&\& true &nbsp",result,"<br>");
+        var result = 0 && true;
+        document.writeln("0 \&\& true &nbsp",result,"<br>");
+        var result = false || true;
+        document.writeln("false \|\| true &nbsp",result,"<br>");
+        var result = 0 || true;
+        document.writeln("0 \|\| true &nbsp",result,"<br>");
+        var result = !(0 || true);
+        document.writeln("0 \!\|\| true &nbsp",result,"<br>");
+        //Bitwise operators & AND, | OR, ^ XOR, ~ NOT,  
+        a=5; //0101
+        b=1; //0001
+        var result = a & b;
+        document.writeln("a \& b &nbsp",result,"<br>");
+        var result = a | b;
+        document.writeln("a \| b &nbsp",result,"<br>");
+        var result = ~5;
+        document.writeln("a \| b &nbsp",result,"<br>");
+        var result = a << b;
+        document.writeln("a \<\< b &nbsp",result,"<br>");
+    </script>
+ 
+</body>
+</html>

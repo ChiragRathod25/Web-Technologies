@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="1xslvalueof.xsl" ?>
+
+<catalog>
+	<cd>
+		<title>Title1</title>
+		<artist>abc</artist>
+		<country>India</country>
+		<price>100</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title2</title>
+		<artist>xyz</artist>
+		<country>India</country>
+		<price>200</price>
+		<year>2011</year>
+	</cd>
+</catalog>

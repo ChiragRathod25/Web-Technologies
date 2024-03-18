@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+<body onload="win_help=null;">
+    <input type="button" value="help" onclick="doHelp()">
+    <script>
+            function doOpen(){
+                win_help= window.open("","","width=200,height=100");
+            }
+            function doHelp(){
+                if(win_help != null)
+                     if(!win_help.closed) win_help.focus();
+                        else doOpen();
+                else doOpen();
+            }
+    </script>
+</body>
+</html>

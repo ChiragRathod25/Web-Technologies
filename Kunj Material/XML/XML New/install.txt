@@ -1,0 +1,11 @@
+https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml
+
+There are several types of serialization formats, like:
+
+CSV (Comma Separated Values - 1972)
+XML1.0 (eXtensible Markup Language - 1998)
+JSON (JavaScript Object Notation - 2001)
+YAML (YAML Ain’t Markup Language - 2004)
+MessagePack (2008)
+Protobuf (Protocol Buffers - 2008)
+BSON (Binary JSON - 2016)

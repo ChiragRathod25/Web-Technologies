@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="5xslchoose.xsl" ?>
+
+<catalog>
+	<cd>
+		<title>Title1</title>
+		<artist>Artist1</artist>
+		<price>10.90</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title2</title>
+		<artist>Artist2</artist>
+		<price>9.90</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title3</title>
+		<artist>Artist3</artist>
+		<price>9.90</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title4</title>
+		<artist>Artist4</artist>
+		<price>10.20</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title5</title>
+		<artist>Artist5</artist>
+		<price>9.90</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title6</title>
+		<artist>Artist6</artist>
+		<price>10.90</price>
+		<year>2011</year>
+	</cd>
+	<cd>
+		<title>Title7</title>
+		<artist>Artist7</artist>
+		<price>8.10</price>
+		<year>2011</year>
+	</cd>
+</catalog>
+	

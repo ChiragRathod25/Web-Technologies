@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE mail SYSTEM "external.dtd">
+<mail>
+  <to>abc</to>
+  <from>xyz</from>
+  <heading>Demo</heading>
+  <body>hello</body>
+</mail>
