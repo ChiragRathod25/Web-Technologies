@@ -12,15 +12,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <th>Artist</th>
 		<th>Country</th>
       </tr>
+      <xsl:for-each select="catalog/cd">
+
       <tr>
-        <td><xsl:value-of select="catalog/cd/title" /></td>
-        <td><xsl:value-of select="catalog/cd/artist" /></td>
-        <td><xsl:value-of select="catalog/cd/country" /></td>
+        <td><xsl:value-of select="title" /></td>
+        <td><xsl:value-of select="artist" /></td>
+        <td><xsl:value-of select="country" /></td>
       </tr>
-	  
+    </xsl:for-each>
+ 
     </table>
   </body>
   </html>
 </xsl:template>
 </xsl:stylesheet>
-

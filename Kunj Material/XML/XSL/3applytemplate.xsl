@@ -6,7 +6,7 @@
   <html>
   <body>
   <h2>My Collection</h2>
-  <xsl:apply-templates/>
+  <xsl:apply-templates/> <!--here important-->
   </body>
   </html>
 </xsl:template>
