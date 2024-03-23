@@ -94,7 +94,7 @@ form.addEventListener('submit', (event) => {
 ## Project 5 - Keyboard
 ```Javascript
 window.addEventListener('keydown', (event) => {
-  insert.innerHTML = `
+insert.innerHTML = `
 <table>
   <tr>
     <td>Key</td>
@@ -110,5 +110,6 @@ window.addEventListener('keydown', (event) => {
   </tr>
 </table>
 `;
+  event.preventDefault();
 });
 ```
