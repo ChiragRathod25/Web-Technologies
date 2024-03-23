@@ -47,5 +47,46 @@ setInterval(function () {
 
 ## Project 4 - Guess the Number
 ```Javascript
+let count = 10;
+let answer = Math.floor(Math.random() * 100);
+let guessField = document.querySelector('.guessField');
+let lowOrHi=document.querySelector('.lowOrHi');
 
+let guesses = document.querySelector('.guesses');
+let form = document.querySelector('.form');
+let lastResult=document.querySelector('.lastResult')
+function reset() {
+  guessField.innerHTML=""
+  lowOrHi.innerHTML=""
+  guesses.innerHTML=""
+  answer = Math.floor(Math.random() * 100);
+  count = 10;
+  lastResult.innerHTML=`${count}`
+}
+
+form.addEventListener('submit', (event) => {
+  if (guessField.value > answer) {
+    lowOrHi.innerHTML=`Less than previous guess`;
+  } else if (guessField.value < answer) {
+    lowOrHi.innerHTML=`More than previous guess`;
+  } else {
+    lowOrHi.innerHTML=`Hurray !! \ncorrect Guess: ${guessField.value}`;
+    alert(`Hurray !! Correct Guess \n correct Guess: ${guessField.value}`);
+    let restart=confirm('Do you want to restart the game?');
+    if(restart){
+      reset();
+    }
+  }
+  guesses.innerHTML+=`${guessField.value} ,`;
+  event.preventDefault();
+  count--;
+  lastResult.innerHTML=`${count}`
+  if (count <= 0) {
+    lowOrHi.innerHTML=`correct Guess: ${answer}`;
+    let restart=confirm('Do you want to restart the game?');
+    if(restart){
+      reset();
+    }
+  }
+});
 ```
