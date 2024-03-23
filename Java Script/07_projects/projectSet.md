@@ -90,3 +90,25 @@ form.addEventListener('submit', (event) => {
   }
 });
 ```
+
+## Project 5 - Keyboard
+```Javascript
+window.addEventListener('keydown', (event) => {
+  insert.innerHTML = `
+<table>
+  <tr>
+    <td>Key</td>
+    <td>Key Code</td> 
+    <td>Code</td>
+    <td>Unicode</td>
+    </tr>
+    <tr>
+    <td>${event.key === ' ' ? 'Spacebar' : event.key}</td>
+    <td>${event.keyCode}</td>
+    <td>${event.code}</td>
+    <td>${event.key.charCodeAt(0)}</td>
+  </tr>
+</table>
+`;
+});
+```
