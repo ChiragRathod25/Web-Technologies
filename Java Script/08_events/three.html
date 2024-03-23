@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Function</title>
+  </head>
+  <body>
+    <h1>Chirag Asmi</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      let today = new Date();
+      console.log(str, today.toLocaleTimeString());
+    };
+    let name_time;
+    document.querySelector("#start").addEventListener("click", function () {
+      if(!name_time){
+      console.log("Started");
+        name_time = setInterval(sayDate, 1000, "chiku");
+      }
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      if (name_time != undefined) {
+        console.log("Stopped");
+        clearInterval(name_time);
+        name_time=null
+      }
+    });
+  </script>
+</html>
