@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body style="background-color: #414141;color: #909090;">
+    ->api - ex.github,random user, etc
+    ->.json formator to read it
+    ->XML Https Request
+        ->Ajax Request
+        ->ready state - Mozilla developer
+
+    ->0	UNSENT	Client has been created. open() not called yet.
+    ->1	OPENED	open() has been called.
+    ->2	HEADERS_RECEIVED	send() has been called, and headers and     status  are available.
+    ->3	LOADING	Downloading; responseText holds partial data.
+    ->4	DONE	The operation is complete.
+</body>
+<script>
+    const requestURL="https://api.github.com/users/chiragrathod25";
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requestURL);
+    // console.log(xhr.readyState);
+    xhr.onreadystatechange= function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            // console.log(this.responseText) //responce it into string formate
+            // const data=this.responseText;
+            // console.log(typeof data)
+            const data=JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(data)
+            console.log(data.followers)
+            console.log(data.html_url)
+        }
+    }; //to check ready state continuesly
+    xhr.send();
+
+    //v8 engine - github rapo
+
+
+
+</script>
+</html>
