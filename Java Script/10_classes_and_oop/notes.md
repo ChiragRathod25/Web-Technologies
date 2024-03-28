@@ -19,3 +19,11 @@
 - Encapsulation
 - Inheritance
 - Polymorphism
+
+# 
+- Javasript is Prototyple Behaviour
+- prototyple behaviour -> for array obj =  array protocol->obj protocol->getter , setter //"go in dept protocols" // Inheritance applied
+
+- Array->obj->null
+- String->obj->null
+- function->obj->null
