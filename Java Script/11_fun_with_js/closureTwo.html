@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closeure InnerTwo</title>
+  </head>
+  <body bgcolor="#313131">
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+  </body>
+  <script>
+    // document.querySelector('#orange').onclick=function(){
+    //   document.body.style.backgroundColor='orange'
+    // }
+    // document.querySelector('#green').onclick=function(){
+    //   document.body.style.backgroundColor='green'
+    // }
+
+    // using Clockhandler - lexical scoping example
+    function clickHandler(color){
+      // document.body.style.backgroundColor=`${color}`
+      return function(){
+        document.body.style.backgroundColor=`${color}`
+      }
+    }
+    
+    document.getElementById('orange').onclick=clickHandler("orange")
+    document.getElementById('green').onclick=clickHandler("green")
+    
+    </script>
+    <!-- <script>
+      function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName;
+      }
+      const myFunc = makeFunc();
+      myFunc();
+    </script> -->
+</html>
