@@ -113,3 +113,118 @@ insert.innerHTML = `
   event.preventDefault();
 });
 ```
+## Project 6 - Unlimited Color Bg Change
+```Javascript
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+const body = document.querySelector('body');
+let startChanging = null;
+let color;
+let arr = ['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6, 7, 8, 9];
+function newColor() {
+  color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += arr[Math.floor(Math.random() * arr.length)];
+  }
+  return color;
+}
+function colorChange() {
+  body.style.backgroundColor = newColor();
+}
+
+start.addEventListener('click', function () {
+  if (!startChanging) {
+    console.log('Started');
+    startChanging = setInterval(colorChange, 1000);
+  }
+});
+
+stop.addEventListener('click', function () {
+  if (startChanging != undefined) {
+    console.log('Stopped');
+    clearInterval(startChanging);
+    startChanging = null;
+  }
+});
+```
+
+## Project 8 - Typer
+```Javascript
+const typedTextSpan = document.querySelector('.typed-text');
+const cursor = document.querySelector('.cursor');
+
+const words = ['Love', 'Jhakaas', 'mast', 'dhinchak', 'Weird'];
+
+function type() {}
+function erase() {}
+let offset = 0;
+let forward = true;
+let skip_count = 0;
+let skip_delay = 300;
+let len = words.length;
+let part;
+let speed = 400;
+let i = 0;
+
+const wordflik = function typeText() {
+  setInterval(function () {
+    if (forward) {
+      if (offset >= words[i].length) {
+        skip_count++;
+        if ((skip_count = skip_delay)) {
+          skip_count = 0;
+          forward = false;
+        }
+      }
+    } else {
+      if (offset == 0) {
+        forward = true;
+        i++;
+      }
+      if (i >= len) {
+        i = 0;
+      }
+    }
+    let part = words[i].substring(0, offset);
+    // console.log(i, offset);
+    typedTextSpan.innerHTML = part;
+    if (skip_count == 0) {
+      if (forward) {
+        offset++;
+      } else {
+        offset--;
+      }
+    }
+  }, speed);
+};
+
+wordflik();
+```
+
+## Project 9 - Mouse circle
+```Javascript
+const cursor = document.querySelector('.cursor');
+// an array of 10 colors in hex value
+const colors = [
+  '#FF6633',
+  '#FFB399',
+  '#FF33FF',
+  '#FFFF99',
+  '#00B3E6',
+  '#E6B333',
+  '#3366E6',
+  '#999966',
+  '#99FF99',
+  '#B34D4D',
+];
+// add circle to cursor and change it's color as cursor moves on the screen. Pick color from these array
+let color;
+document.querySelector('html').addEventListener('mousemove', function (e) {
+  cursor.style.left = e.clientX;
+  cursor.style.top = e.clientY + (cursor.getAttribute('height')/ 2);
+  color = colors[Math.floor(Math.random() * colors.length)];
+  cursor.style.backgroundColor = color;
+  // console.log(e.clientX,e.clientY,color)
+});
+
+```
