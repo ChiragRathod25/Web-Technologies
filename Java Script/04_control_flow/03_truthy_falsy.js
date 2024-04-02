@@ -34,7 +34,7 @@ if(Object.keys(emptyObj).length===0){
 
 let val1;
 // val1=5??10
-// val1=null??10 // if there is value than assign that valur to val1 else assign null
+// val1=null??10 // if there is value than assign that value to val1 else assign null
 
 // val1=undefined??15  //same logic
 val1=null??10??15 //it will asign first value

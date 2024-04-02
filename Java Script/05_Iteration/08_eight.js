@@ -1,17 +1,17 @@
 const array1=[1,2,3,4]
 //1+2+3+4
 const initialValue=0
-const sumWithInitial=array1.reduce(
-    (accumulator,currentValue)=>accumulator+currentValue,initialValue)
+// const sumWithInitial=array1.reduce(
+    // (accumulator,currentValue)=>accumulator+currentValue,initialValue)
 
 //using function
-// const sumWithInitial=array1.reduce(
-//   function(acc,currVal){
-    // console.log(`acc:${acc} and currVal:${currVal}`)
-    // return acc+currVal
-//   },12)  //value after , assigned to acc
+const sumWithInitial=array1.reduce(
+  function(acc,currVal){
+    console.log(`acc:${acc} and currVal:${currVal}`)
+    return acc+currVal
+  },0)  //value after , assigned to acc
 
-// console.log(sumWithInitial)
+console.log(sumWithInitial)
 
 const courses=[
     {

@@ -1,23 +1,22 @@
 const coding = ["JS", "CSS", "CPP", "Python"]
 
 coding.forEach((item) => {
-    console.log(item);
+    // console.log(item);
 })
 
-// const values=coding.forEach((item)=>{
+const values=coding.forEach((item)=>{
 // console.log(item);
-// })
+})
 // console.log (values) //undefined
 
-// const values2=coding.forEach((item)=>{
+const values2=coding.forEach((item)=>{
 // console.log(item);
 // return item
-// })
+})
 // console.log (values2) //undefined
 
 // ----------
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 const newNums = myNums.filter((num) => num > 5) //it takes call back and return when condition is satisfiesd
 const newNums2 = myNums.filter((num) => {
     return num > 5

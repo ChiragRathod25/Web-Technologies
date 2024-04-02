@@ -1,8 +1,11 @@
 # Projects JavaScript
+
 ## Project Link
-stackbiltz : [click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)  
+
+stackbiltz : [click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
 ## Project 1 - Background Color Change
+
 ```Javascript
 let boxes = document.querySelectorAll('span');
 boxes.forEach((box) => {
@@ -14,6 +17,7 @@ boxes.forEach((box) => {
 ```
 
 ## Project 2 - BMI Calculator
+
 ```Javascript
 let form = document.querySelector('form');
 
@@ -36,8 +40,9 @@ form.addEventListener('submit', (event) => {
 ```
 
 ## Project 3 - Digital Clock
+
 ```javascript
-let clock = document.getElementById('clock');
+let clock = document.getElementById("clock");
 let date;
 setInterval(function () {
   date = new Date();
@@ -46,6 +51,7 @@ setInterval(function () {
 ```
 
 ## Project 4 - Guess the Number
+
 ```Javascript
 let count = 10;
 let answer = Math.floor(Math.random() * 100);
@@ -92,13 +98,14 @@ form.addEventListener('submit', (event) => {
 ```
 
 ## Project 5 - Keyboard
+
 ```Javascript
 window.addEventListener('keydown', (event) => {
 insert.innerHTML = `
 <table>
   <tr>
     <td>Key</td>
-    <td>Key Code</td> 
+    <td>Key Code</td>
     <td>Code</td>
     <td>Unicode</td>
     </tr>
@@ -113,7 +120,9 @@ insert.innerHTML = `
   event.preventDefault();
 });
 ```
+
 ## Project 6 - Unlimited Color Bg Change
+
 ```Javascript
 const start = document.querySelector('#start');
 const stop = document.querySelector('#stop');
@@ -149,6 +158,7 @@ stop.addEventListener('click', function () {
 ```
 
 ## Project 8 - Typer
+
 ```Javascript
 const typedTextSpan = document.querySelector('.typed-text');
 const cursor = document.querySelector('.cursor');
@@ -202,6 +212,7 @@ wordflik();
 ```
 
 ## Project 9 - Mouse circle
+
 ```Javascript
 const cursor = document.querySelector('.cursor');
 // an array of 10 colors in hex value
@@ -227,4 +238,98 @@ document.querySelector('html').addEventListener('mousemove', function (e) {
   // console.log(e.clientX,e.clientY,color)
 });
 
+```
+
+## Project 10 - Emojis
+
+```Javascript
+const btn = document.querySelector('#emoji');
+const emojis = [
+  '😆','😅','🤣','😂','😀','🤑','🤨','🙂','😊','😗',
+  '😛','😏','🤥','😴','🥺','😧','😇','😳','🙃','🥴',
+  '🧐','🤨','😒','🤔','🤭','🥰','🤐','👀','🤔','🤪', '🥲','😃','😁','😬',];
+btn.addEventListener('mouseover', function () {
+  let random = Math.floor(Math.random() * emojis.length);
+  // console.log(random)
+  btn.innerHTML = emojis[random];
+  random = null;
+});
+```
+## Project 11 - Text Editor
+```javascript
+const inputText = document.querySelector('#input-field');
+const outputField = document.querySelector('#output-field');
+const btn = document.querySelectorAll('.btn');
+
+for (let i = 0; i < btn.length; i++) {
+  // console.log(btn[i]);
+  btn[i].addEventListener('click', function () {
+    if (inputText.value === '') {
+      alert('Please, Enter text first !!');
+      return;
+    }
+    let selectedClass = btn[i].getAttribute('class');
+    // console.log(selectedClass)
+    outputField.style.fontStyle = 'normal';
+    outputField.style.fontWeight = 'normal';
+    outputField.style.textDecoration = null;
+    if (selectedClass.includes('uppercase')) {
+      outputField.innerHTML = inputText.value.toUpperCase();
+    } else if (selectedClass.includes('lowercase')) {
+      outputField.innerHTML = inputText.value.toLowerCase();
+    } else if (selectedClass.includes('capitalize')) {
+      outputField.innerHTML =
+        inputText.value.trim().charAt(0).toUpperCase() +
+        inputText.value.trim().slice(1);
+    } else if (selectedClass.includes('bold')) {
+      outputField.innerHTML = inputText.value;
+      outputField.style.fontWeight = 'bold';
+    } else if (selectedClass.includes('italic')) {
+      outputField.innerHTML = inputText.value;
+      outputField.style.fontStyle = 'italic';
+    } else if (selectedClass.includes('underline')) {
+      outputField.innerHTML = inputText.value;
+      outputField.style.textDecoration = 'underline';
+    } else if (selectedClass.includes('camelCase')) {
+      {
+        /*
+      // method 1
+      // outputField.innerHTML=inputText.value;
+      //here we declared array and stored into one array
+      const wordsArray = new Array();
+      for (let i = 0; i < inputText.value.trim().length; i++) {
+        if (i === 0) {
+          previosI = 0;
+        }
+        if (i === inputText.value.trim().length - 1) {
+          wordsArray.push(inputText.value.slice(previosI, i + 1));
+          break;
+        }
+        if (inputText.value[i] === ' ') {
+          // console.log(i)
+          wordsArray.push(inputText.value.slice(previosI, i));
+          previosI = i + 1;
+        }
+      }
+      // console.log(wordsArray)
+      outputField.innerHTML = '';
+      wordsArray.forEach(function (w) {
+        outputField.innerHTML += w[0].toUpperCase() + w.slice(1);
+        outputField.innerHTML += ' ';
+      });*/
+      }
+
+      {
+        //method 2
+        const wordsArray = inputText.value.trim().split(' ');
+        // console.log(wordsArray);
+        outputField.innerHTML = '';
+        wordsArray.forEach(function (w) {
+          outputField.innerHTML += w[0].toUpperCase() + w.slice(1);
+          outputField.innerHTML += ' ';
+        });
+      }
+    }
+  });
+}
 ```
