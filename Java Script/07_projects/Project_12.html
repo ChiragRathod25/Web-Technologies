@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Image Feed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Random Image Feed</h1>
+    <div class="content"></div>
+    <button>Chai aur code</button>
+
+    <script src="chaiaurcode.js"></script>
+  </body>
+  <script>
+    let baseURL = "https://source.unsplash.com/all/300x300";
+
+    // this url gives an image. Use this and NO API calls
+    const imgContent = document.querySelector(".content");
+    const img = document.createElement("img");
+    img.setAttribute("src", baseURL);
+    imgContent.appendChild(img);
+    baseURL = null;
+  </script>
+</html>
