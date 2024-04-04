@@ -333,3 +333,68 @@ for (let i = 0; i < btn.length; i++) {
   });
 }
 ```
+
+## Project 12 - RandomImage
+```Javascript
+let baseURL = 'https://source.unsplash.com/all/300x300';
+
+// this url gives an image. Use this and NO API calls
+const imgContent=document.querySelector('.content')
+const img=document.createElement('img');
+img.setAttribute('src',baseURL)
+imgContent.appendChild(img)
+baseURL=null
+```
+
+## Project 13 - Jokes
+```Javascript
+const url = 'https://api.chucknorris.io/jokes/random';
+const btn = document.querySelector('#getJoke');
+const jokePara = document.querySelector('#joke');
+
+// handle this end point with XMLHttpRequest
+/*btn.addEventListener('click',function(){
+  const xhr=new XMLHttpRequest();
+  xhr.open('GET',url);
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState===4){
+      let data=this.responseText;
+      data=JSON.parse(data)
+      // console.log(typeof data);
+      jokePara.innerHTML=data.value;
+    }
+  }
+  xhr.send();
+})*/
+
+// handle this end point with promises
+/*
+btn.addEventListener('click',function(){
+fetch(url).then((responce)=>{
+  // console.log(responce);
+  return responce.json();
+}).then((data)=>{
+  // console.log(data);
+  jokePara.innerHTML=data.value;
+}).catch((error)=>{
+  console.log(error);
+})
+})*/
+
+// handle the case of race condition
+btn.addEventListener('click', function () {
+  async function getData() {
+    try {
+      const response = await fetch(url);
+      // console.log(response);
+      const data = await response.json();
+      // console.log(data);
+      jokePara.innerHTML = data.value;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  getData();
+});
+
+```
