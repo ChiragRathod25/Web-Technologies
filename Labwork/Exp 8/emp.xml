@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="emp.xsl" type="text/xsl"?>
+
+<Employee_Info>
+    <Employee Employee_Number="123">
+        <Name>Chirag Rathod</Name>
+        <Department>Marketing</Department>
+        <Telephone>+91 98756 25462</Telephone>
+        <Email>rajeshKumar@microsoft.com</Email>
+    </Employee>
+    <Employee Employee_Number="456">
+        <Name>Himanshu Parmar</Name>
+        <Department>Finance</Department>
+        <Telephone>+91 78982 32548</Telephone>
+        <Email>priyaSharma@gmail.com</Email>
+    </Employee>
+</Employee_Info>

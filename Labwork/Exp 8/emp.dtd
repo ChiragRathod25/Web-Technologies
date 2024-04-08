@@ -1,0 +1,9 @@
+<!ELEMENT Employee_Info (Employee*)>
+
+<!ELEMENT Employee (Name, Department, Telephone, Email)>
+<!ATTLIST Employee Employee_Number CDATA #REQUIRED>
+
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Department (#PCDATA)>
+<!ELEMENT Telephone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
