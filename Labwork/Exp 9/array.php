@@ -9,13 +9,12 @@
     echo "<br>Total Colors: ";
     echo count($colors);
     echo "<br>";
-    
-    
     echo "Access with foreach Loop : "; // Output: Array
     foreach ($colors as $color) {
         echo $color . " ";
     }
     echo "<br>";
+    
     //array with key value pair
     $person = array("name" => "John", "age" => 30);
     echo $person["name"]; 
