@@ -1,0 +1,23 @@
+Username : SportsHT29
+Password : Sports@Inv2937
+IP : 4.156.21.85
+
+CREATE USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Sports@Inv2937';
+CREATE USER 'chirag'@'4.156.24.161' IDENTIFIED WITH mysql_native_password BY 'Sports@Inv2937';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'chirag'@'4.156.24.161' WITH GRANT OPTION;
+
+
+
+
+mysql server
+pass@2937
+
+sports-inventory-management.database.windows.net
+
+
+php connection:
+
+$servername = "localhost";
+$username = "root";
+$password = "Sports@Inv2937";
+$dbname = "Sports-Inventory-Management";
