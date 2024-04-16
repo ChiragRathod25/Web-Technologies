@@ -16,7 +16,7 @@ class Person {
 
 echo "var_dump() function returns the data type and the value<br>";
 
-$person = new Person("John", 25);
+$person = new Person("Rohit Sharma", 25);
 var_dump($person);
 
 var_dump($x);
