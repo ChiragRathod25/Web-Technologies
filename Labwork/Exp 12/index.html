@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Using Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="userListController">
+        <h1>User List</h1>
+        
+        <ul>
+            <li ng-repeat="user in users">{{ user.name }}</li>
+        </ul>
+        
+        <form ng-submit="adduser()">
+            <input type="text" ng-model="newuserName" placeholder="Enter new user">
+            <button type="submit">Add user</button>
+        </form>
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('userListController', function($scope) {
+                $scope.users = [
+                    { name: 'Chirag' },
+                    { name: 'Himanshu ' },
+                    { name: 'Himanshi' }
+                ];
+
+                $scope.adduser = function() {
+                    if ($scope.newuserName) {
+                        $scope.users.push({ name: $scope.newuserName });
+                        $scope.newuserName = ''; 
+                    }
+                };
+            });
+    </script>
+</body>
+</html>
