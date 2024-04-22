@@ -20,7 +20,8 @@ if ($conn->query($sqlCreateDatabase) === TRUE) {
 $conn->select_db($databaseName);
 
 $result = $conn->query("SHOW DATABASES");
-echo "List of databases:<br>";
+echo "<br>";
+echo "<u><b>List of databases:<br></u></b>";
 while ($row = $result->fetch_assoc()) {
     echo $row['Database'] . "<br>";
 }
@@ -31,15 +32,22 @@ $sqlCreateTable = "CREATE TABLE IF NOT EXISTS $tableName (
     name VARCHAR(30) NOT NULL
 )";
 if ($conn->query($sqlCreateTable) === TRUE) {
+    echo "<br>";
     echo "Table '$tableName' created successfully<br>";
 } else {
     echo "Error creating table: " . $conn->error;
 }
 
 $result = $conn->query("SHOW TABLES");
-echo "Tables in database '$databaseName':<br>";
-while ($row = $result->fetch_assoc()) {
-    echo $row['Tables_in_' . $databaseName] . "<br>";
+echo "</br>";
+echo "<u><b>Tables in database '$databaseName':<br></u></b>";
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo $row["Tables_in_mywebdb"] . "<br>";
+    }
+} else {
+    echo "0 tables found";
 }
+
 $conn->close();
 ?>
