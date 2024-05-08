@@ -12,10 +12,11 @@
 			echo "<TH>Fruit's Name</TH>";
 			echo "<TH>Price</TH>";
 			echo "</TR>";
+			
 			// Ensures that the each() function begins from the start:
 			reset($arryFruitName);
 
-			while (list($key, $value) = each($arryFruitName))
+			foreach ($arryFruitName as $key => $value)
 			{
 				// Printing a single row
 				echo "<TR>";
@@ -23,6 +24,7 @@
 				echo "<TD>$value</TD>";
 				echo "</TR>";
 			}
+
 			// Ending the table
 			echo "</TABLE>";
 			?>

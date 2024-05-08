@@ -16,9 +16,16 @@
 			// Ensures that the each() function begins from the start:
 			reset($array);
 
-			while (list($key, $value) = each($array))
-			{
-				// Printing a single row
+			// while (list($key, $value) = each($array))
+			// {
+			// 	// Printing a single row
+			// 	echo "<TR>";
+			// 	echo "<TD>$key</TD>";
+			// 	echo "<TD>$value</TD>";
+			// 	echo "</TR>";
+			// }
+			
+			foreach($array as $key=>$value){
 				echo "<TR>";
 				echo "<TD>$key</TD>";
 				echo "<TD>$value</TD>";

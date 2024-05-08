@@ -4,9 +4,12 @@
 
 	function MySum()
 	{
-		global $var1, $var2;
-		$var2 = $var1 + $var2;
+		global $var1, $var2,$var3;
+		$var3 = $var1 + $var2;
+		echo "The Sum is:", $var3."<br/>";
 	} 
 	MySum();
-	echo "The Sum is:", $var2;
+
+	echo "Vakue of variable 2 is :", $var2;
+	echo "<br/>".$var3;
 ?>

@@ -9,7 +9,7 @@
 	foreach ($staff as $value1)
 	{
 		$ctr2 = 0;
-		foreach ($value1 as $value2)
+		  foreach ($value1 as $value2)
 		{
 		echo "Value held in position $ctr1 segment $ctr2 is: $value2<BR>";
 			$ctr2++;

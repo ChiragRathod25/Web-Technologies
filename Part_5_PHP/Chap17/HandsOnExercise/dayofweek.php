@@ -1,7 +1,7 @@
 <?php
 
 		$dayofweek=date("D");
-
+		echo $dayofweek;
 		echo "Hello Everyone ";
 
 		if ($dayofweek=="Monday")

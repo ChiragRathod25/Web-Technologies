@@ -11,9 +11,13 @@
 		{
 			echo $number1 . " is equal to " . $number3 . "<BR>";
 		}
-		If ($number1 === $number3)
+		
+		if ($number1 === $number3)
 		{
 			echo $number1 . " is identical to " . $number3 . "<BR>";
+		}
+		else{
+			echo $number1 . " is not identical to " . $number3 . "<BR>";
 		}
 
 		If ($number2 !== $number3)
