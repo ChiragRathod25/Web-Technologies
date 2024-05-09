@@ -24,6 +24,7 @@
     echo '<th>First Name</th>';
     echo '<th>Last Name</th>';
     echo '<th>Email</th>';
+    echo '<th>Delete</th>';
     echo '</tr>';
     $sql="SELECT * from users";
     $result=mysqli_query($connect,$sql);
@@ -36,7 +37,12 @@
             echo "<td>$firstname</td>";
             echo "<td>$lastname</td>";
             echo "<td>$email</td>";
-
+            echo "<form action='deleteUser.php' method='POST'>";
+            echo "<input type='hidden' name='firstname' value=$firstname>";
+            echo "<input type='hidden' name='lastname' value=$lastname>";
+            echo "<input type='hidden' name='email' value=$email>";
+            echo "<td><input type='submit' value='Delete'></td>";
+            echo "</form>";
             echo '</tr>';
         }
     }

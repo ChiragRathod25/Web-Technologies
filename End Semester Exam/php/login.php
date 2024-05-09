@@ -15,12 +15,20 @@
         <hr>
         <input type="submit" value="submit">
     </form>
+    <form action="logout.php" method="post">
+        <input type="submit" value="Logout">
+    </form>
+    <form action="registrationForm.php" method="post">
+        <input type="submit" value="registrationForm.php">
+    </form>
+ 
 </body>
 <?php
 
 require('databaseConnect.php');
-if(isset($_POST['firstname'])){
-    $firstname=$_POST['firstname'];
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    if(isset($_POST['firstname'])){
+        $firstname=$_POST['firstname'];
 }
 if(isset($_POST['email'])){
     $email=$_POST['email'];
@@ -33,8 +41,21 @@ if(mysqli_num_rows($result)>0){
     {   
         if($row['firstname']==$firstname){
             if($row['email']==$email){
-                 $flage=true;
-                echo "<script>document.querySelector('body').innerHTML='Hello, $firstname'</script>";
+                $flage=true;
+                echo "<script>document.querySelector('body').innerHTML+='Hello, $firstname'</script>";
+                $_SESSION['id']=$firstname;
+                // echo $_SESSION['id'];
+                setcookie("user","$firstname",time() + (86400*30),"/");
+                if(count($_COOKIE)>1){
+                    echo "Cookie is enable";
+                    foreach ($_COOKIE as $key => $val) {
+                        echo "$key is $val<br>\n";
+                    }
+                }
+                else{
+                    echo "Cookie is disable";
+                }
+                break;
             }
         }
     }
@@ -42,9 +63,17 @@ if(mysqli_num_rows($result)>0){
         echo "<script>alert('No user found');</script>";
         echo "No user found";
     }
+    
+
+
 }
 else{
     echo "No data found";
+}
+
+}
+else {
+
 }
 ?>
 </html>

@@ -1,12 +1,14 @@
 <?php
     session_start();
     require('databaseConnect.php');
-    if(isset($_POST['username'])){
-        $username=$_REQUEST['username'];
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+
+        if(isset($_POST['username'])){
+            $username=$_POST['username'];
     }
     
     if(isset($_POST['password'])){
-        $password=$_REQUEST['password'];
+        $password=$_POST['password'];
     }
     $sql="SELECT * FROM administrator where username='$username' AND password='".md5($password)."'";
     $result=mysqli_query($connect,$sql);
@@ -18,4 +20,8 @@
     else{
         echo "Username or password incorrect";
     }
+}
+else{
+    echo "No Request";
+}
 ?>  
