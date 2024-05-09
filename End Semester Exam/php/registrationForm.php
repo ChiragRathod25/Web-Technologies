@@ -12,17 +12,18 @@
             border-radius:15px;
         }
     </style>
+    <script src="../JS/validateForm.js"></script>
 </head>
 <body>
-    <form action="registration.php">
+    <form onsubmit="return validateMyForm(this)" action="hellouser.php" method="POST"  >
     <label for="firstname">First Name : </label>
-    <input type="text" id="firstname">
+    <input type="text" id="firstname" name="firstname">
     <hr>
     <label for="lastname">Last Name : </label>
-    <input type="text" id="lastname">
+    <input type="text" id="lastname" name="lastname">
     <hr>
     <label for="email">Email : </label>
-    <input type="email" id="email">
+    <input type="email" id="email" name="email">
     <hr>
     <input type="submit" value="submit">
     <input type="reset" value="Reset">
