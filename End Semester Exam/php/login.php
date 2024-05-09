@@ -42,7 +42,9 @@ if(mysqli_num_rows($result)>0){
         echo "<script>alert('No user found');</script>";
         echo "No user found";
     }
-
+}
+else{
+    echo "No data found";
 }
 ?>
 </html>
