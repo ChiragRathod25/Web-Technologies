@@ -8,7 +8,7 @@
 <body>
     <h1>
         Hi, <?php 
-    session_start();
+        session_start();
         echo $_SESSION["username"];
          ?>
     </h1>

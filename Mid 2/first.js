@@ -5,6 +5,7 @@ let len="chirag";
 // console.log(len.indexOf('c'))
 // console.log(len.substring(3))
 // console.log(len.toUpperCase())
+//  alert('hi');
 
 var arr=new Array();
 arr.push('Chirag')
@@ -12,7 +13,7 @@ arr.push('Asmita')
 // console.log(arr)
 console.log(arr.length)
 arr.sort()
-// console.log(arr)
+console.log(arr)
 
 var arr2=['rinku','mahek']
 var arr3=arr.concat(arr2);

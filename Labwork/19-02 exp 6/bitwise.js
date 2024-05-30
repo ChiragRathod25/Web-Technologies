@@ -4,7 +4,7 @@ document.writeln("5 & 2 ;= ",a,"</br>")
 let b=5|2  //OR
 document.writeln("5 | 2 ;= ",b,"</br>")
 
-let c=~5  //NOT
+let c=~5 //NOT
 document.writeln("~5 ;= ",c,"</br>")
 
 let d=5^1  //XOR

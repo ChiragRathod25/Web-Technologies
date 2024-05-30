@@ -12,11 +12,11 @@
         
         function reset(){
             clearTimeout(timeId);
-            timeID= setTimeout('logout()',5000);
+            timeID= setTimeout(logout,5000);
         }
     </script>
 </head>
-<body onkeypress="reset()", onmousemove="reset()" onLoad="timeID= setTimeout('logout()',5000)";)>
+<body onkeypress="reset()", onmousemove="reset()" onLoad="timeID= setTimeout(logout,5000)";)>
 <h1> without any events page redirect to logout.html after 5 seconds</h1>
 </body>
 </html>

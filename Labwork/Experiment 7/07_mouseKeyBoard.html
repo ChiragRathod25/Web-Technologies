@@ -39,7 +39,7 @@
     keyBoardKey.appendChild(key);
     keyBoardKey.appendChild(unicodeKey);
     document.querySelector("html").addEventListener("keydown", function (e) {
-        console.log(e)
+      console.log(e)
       key.innerHTML = `Key Pressed : ${e.key}`;
       unicodeKey.innerHTML = `Unicode Charactar : ${e.key.charCodeAt(0)}`;
       e.preventDefault(); //to prevent default behaviour of special keys
